@@ -53,7 +53,7 @@
    <VisibilityCircle ContourColor="1 0.653666 0" FillColor="1 0.826825 0.499992" FillOpacity="60"/>
    <Component Name="HUJO_Sat">
     <Graphics3d>
-     <File3ds Name="CIC_Sat_PF.3ds"/>
+     <File3ds Name="Sat_HUJO_3D.3ds"/>
      <Radius Value="1"/>
      <LightSensitive Value="1"/>
      <Use3dsCoords Value="1" MeshScale="0.001"/>
@@ -63,13 +63,13 @@
     <Geometry>
      <Position>
       <Value>
-       <Fixed Data="0 0 0"/>
+       <File Name="CIC-Sat_POSITION_VELOCITY.TXT"/>
       </Value>
      </Position>
      <Orientation>
       <Quaternion>
        <Value>
-        <Fixed Data="1 0 0 0"/>
+        <File Name="CIC-Sat_QUATERNION.txt"/>
        </Value>
       </Quaternion>
      </Orientation>
