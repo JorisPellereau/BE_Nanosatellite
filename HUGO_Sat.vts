@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project Revision="6540">
+ <General Name="" StartDateTime="58063 56756.923000" EndDateTime="58063 60356.923000"/>
+ <MetaData>
+  <Description></Description>
+ </MetaData>
+ <StartOptions TimeRatio="1" UseStateTimeRatio="0" SysTimeSynced="0" Paused="0" Looped="0" Minimized="0" Hidden="0" AutoClosed="0"/>
+ <TimelineOptions ProjectLocked="1" CursorLocked="0" CursorRatio="0" ViewStart="33282 0.000000" ViewSpan="0" DateFormat="ISODate"/>
+ <Sky>
+  <Sun>
+   <Prop2d>
+    <Icon Anchor="CENTER" Size="MEDIUM" Opacity="100">
+     <Font Size="MEDIUM" Color="1 1 1"/>
+     <ImageLayer Type="Default"/>
+    </Icon>
+   </Prop2d>
+   <Track Color="0.862745 0.862745 0" PenStyle="SolidLine" PenWidth="2"/>
+   <VisibilityCircle ContourColor="0.501961 0.501961 0" FillColor="0 0 0" FillOpacity="50"/>
+  </Sun>
+  <StarCatalog CatalogMode="Builtin">
+   <Track Color="1 1 1" PenStyle="DotLine" PenWidth="1"/>
+  </StarCatalog>
+ </Sky>
+ <ToBeUsedApps>
+  <Application Name="SurfaceView" Id="0" AutoStarted="1"/>
+ </ToBeUsedApps>
+ <Entities>
+  <Body Name="Earth" ParentPath="Sol">
+   <Prop2d>
+    <Icon Anchor="CENTER" Size="MEDIUM" Opacity="100">
+     <Font Size="MEDIUM" Color="1 1 1"/>
+     <ImageLayer Type="Default"/>
+    </Icon>
+   </Prop2d>
+   <Track Color="0 1 0.356664" PenStyle="SolidLine" PenWidth="2"/>
+   <VisibilityCircle ContourColor="0.374502 1 0" FillColor="0.687251 1 0.499992" FillOpacity="60"/>
+   <EphemerisMode Mode="Default"/>
+   <Layers>
+    <BuiltinLayer Name="defaultLayer"/>
+   </Layers>
+  </Body>
+  <Satellite Name="HUJO_Sat" ParentPath="Sol/Earth">
+   <CommonProp>
+    <OrbitPath Color="0 0.466667 1" PenStyle="SolidLine" PenWidth="2"/>
+   </CommonProp>
+   <Prop2d>
+    <Icon Anchor="CENTER" Size="MEDIUM" Opacity="100">
+     <Font Size="MEDIUM" Color="1 1 1"/>
+     <ImageLayer Type="Default"/>
+    </Icon>
+   </Prop2d>
+   <Track Color="1 0.261326 0" PenStyle="SolidLine" PenWidth="2"/>
+   <VisibilityCircle ContourColor="1 0.653666 0" FillColor="1 0.826825 0.499992" FillOpacity="60"/>
+   <Component Name="HUJO_Sat">
+    <Graphics3d>
+     <File3ds Name=""/>
+     <Radius Value="1"/>
+     <LightSensitive Value="1"/>
+     <Use3dsCoords Value="1" MeshScale="0.001"/>
+     <AxesPosition Value="1"/>
+     <RotationCenter X="0" Y="0" Z="0"/>
+    </Graphics3d>
+    <Geometry>
+     <Position>
+      <Value>
+       <Fixed Data="0 0 0"/>
+      </Value>
+     </Position>
+     <Orientation>
+      <Quaternion>
+       <Value>
+        <Fixed Data="1 0 0 0"/>
+       </Value>
+      </Quaternion>
+     </Orientation>
+    </Geometry>
+   </Component>
+   <Events/>
+  </Satellite>
+ </Entities>
+ <Events/>
+ <States>
+  <Instant Time="33282 0" TimeRatio="1" Label="Initial state">
+   <AppState Id="0"/>
+  </Instant>
+ </States>
+</Project>
