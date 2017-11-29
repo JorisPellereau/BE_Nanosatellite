@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project Name="simu" StartDateTime="24802" EndDateTime="24803">
+ <General Revision="1059"/>
+ <ToBeUsedApps>
+  <Application Name="2dWin" Id="0">
+   <TypeRect Property="Geometry" XPos="0" YPos="0" Width="640" Height="480"/>
+  </Application>
+  <Application Name="Celestia" Id="1">
+   <TypeRect Property="Geometry" XPos="640" YPos="0" Width="640" Height="480"/>
+  </Application>
+ </ToBeUsedApps>
+ <Entities>
+  <Body Name="Earth">
+   <Radius Value="6378.14"/>
+  </Body>
+  <Satellite Name="NIMPH" ParentPath="Sol/Earth">
+   <CommonProp>
+    <OrbitPath EnabledOn2d="1" EnabledOn3d="1" Length="2" Color="0 0.976471 0.145098"/>
+   </CommonProp>
+   <Prop2d>
+    <SymbolFile Name=""/>
+   </Prop2d>
+   <Component Name="NIMPH">
+    <Geometry>
+     <Position>
+      <Value>
+       <File Name="Data\NIMPH_POSITION_VELOCITY.TXT"/>
+      </Value>
+     </Position>
+     <Orientation>
+      <Quaternion>
+       <Value>
+        <File Name="Data\NIMPH_QUATERNION.TXT"/>
+       </Value>
+      </Quaternion>
+     </Orientation>
+    </Geometry>
+    <Graphics3d>
+     <GlobalDisplayRatio Value="1"/>
+     <Radius Value="2"/>
+     <File3ds Name="Models\CubeSat\CubeSat_body.3ds"/>
+     <LightSensitive Value="1"/>
+     <Use3dsCoords Value="1"/>
+     <RotationCenter X="0" Y="0" Z="0"/>
+     <ReferenceMarks BodyAxesEnabled="1" BodyAxesStyle="Normal" BodyAxesSize="1" SunDirectionEnabled="0" EarthDirectionEnabled="0" VelocityVectorEnabled="0" BodyToBodyEnabled="0" BodyToBodyTarget=""/>
+    </Graphics3d>
+    <Component Name="GS">
+     <Geometry>
+      <Position>
+       <Value>
+        <Fixed Data="0 0 0"/>
+       </Value>
+      </Position>
+      <Orientation>
+       <Quaternion>
+        <Value>
+         <File Name="Data\NIMPH_QUATERNION_SA_1.TXT"/>
+        </Value>
+       </Quaternion>
+      </Orientation>
+     </Geometry>
+     <Graphics3d>
+      <Radius Value="13.5"/>
+      <File3ds Name="Models\CubeSat\CubeSat_gs.3ds"/>
+      <LightSensitive Value="1"/>
+      <Use3dsCoords Value="1"/>
+      <RotationCenter X="0" Y="0" Z="0"/>
+     </Graphics3d>
+    </Component>
+    <Sensor Name="sensor_NIMPH">
+     <SensorProp>
+      <SensorAttributes SensorType="ELLIPTICAL" HalfAngleX="0.0872664625997165" HalfAngleY="0.0872664625997165"/>
+      <SensorGraphics EnabledOn2d="1" EnabledOn3d="1" MaxLength="10000" ColorAxis="0.850004 0.850004 0.850004" ColorVolumeLine="0 1 0.603326" ColorContourLine="0 1 0.603326" ColorContourPersistent="0.850004 0.850004 0.850004"/>
+     </SensorProp>
+     <Geometry>
+      <Position>
+       <Value>
+        <Fixed Data="0 0 0"/>
+       </Value>
+      </Position>
+      <Orientation>
+       <Quaternion>
+        <Value>
+         <Fixed Data="0.5 0.5 0.5 0.5"/>
+        </Value>
+       </Quaternion>
+      </Orientation>
+     </Geometry>
+    </Sensor>
+   </Component>
+  </Satellite>
+  <GroundStation Name="Toulouse">
+   <LongLatAlt Longitude="1.4875" Latitude="43.554" Altitude="150"/>
+   <Prop2d>
+    <SymbolFile Name=""/>
+   </Prop2d>
+   <EmbeddedCamera Name="EmbeddedCamera_Toulouse">
+    <Geometry>
+     <Orientation>
+      <AltAzCoordinate>
+       <Value>
+        <Fixed Data="0 0"/>
+       </Value>
+      </AltAzCoordinate>
+     </Orientation>
+    </Geometry>
+   </EmbeddedCamera>
+  </GroundStation>
+ </Entities>
+ <Cameras>
+  <Camera Name="Camera_1" ViewType="OrbitView" TargetName="NIMPH"/>
+ </Cameras>
+</Project>
+

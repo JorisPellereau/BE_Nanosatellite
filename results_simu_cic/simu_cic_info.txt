@@ -1,0 +1,20 @@
+#=======================
+# Simulation synthesis
+#=======================
+Simulation name: simu
+Start (UTC): 2017/11/27 00:00:00.000
+End (UTC): 2017/11/28 00:00:00.000
+
+#-----------------------
+# Satellite 1
+#-----------------------
+Name: NIMPH
+
+# Initial conditions
+Initial conditions not available in data structure
+
+#-----------------------
+# Stations
+#-----------------------
+1: Toulouse
+
